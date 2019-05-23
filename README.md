@@ -22,6 +22,14 @@ Application is served by [Parcel bundler](https://parceljs.org) that uses [.babe
 
 Unit tests like [cypress/integration/selectors-spec.js](cypress/integration/selectors-spec.js) that reach into hard to test code paths are also instrumented using the same [.babelrc](.babelrc) file, and this additional code coverage is automatically added to the application code coverage.
 
+### Read
+
+- [Code Coverage for End-to-end Tests](https://glebbahmutov.com/blog/code-coverage-for-e2e-tests/)
+- [Code Coverage by Parcel Bundler](https://glebbahmutov.com/blog/code-coverage-by-parcel/)
+- [Combined End-to-end and Unit Test Coverage](https://glebbahmutov.com/blog/combined-end-to-end-and-unit-test-coverage/)
+
+The official Cypress documentation guide to code coverage is coming, follow issue [#1705](https://github.com/cypress-io/cypress-documentation/issues/1705)
+
 ## CircleCI
 
 Code coverage is saved on CircleCI as a test artifact. You can view the full report there by clicking on the "Artifacts" tab and then on "index.html"
