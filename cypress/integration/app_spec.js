@@ -169,6 +169,10 @@ describe('TodoMVC - React', function () {
       cy.get('.main').should('be.visible')
       cy.get('.footer').should('be.visible')
     })
+
+    it('does nothing without entered text', () => {
+      cy.get('.new-todo').type('{enter}')
+    })
   })
 
   context('Mark all as completed', function () {

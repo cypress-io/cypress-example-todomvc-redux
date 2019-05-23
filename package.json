@@ -5,9 +5,11 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "test": "start-test 1234 cypress:run",
     "cypress:open": "cypress open",
-    "serve": "parcel serve public/index.html",
-    "dev": "start-test serve 1234 cypress:open",
+    "cypress:run": "cypress run",
+    "start": "parcel serve public/index.html",
+    "dev": "start-test 1234 cypress:open",
     "report:coverage": "nyc report --reporter=html",
     "report:coverage:text": "nyc report --reporter=text"
   },
