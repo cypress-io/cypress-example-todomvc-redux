@@ -40,11 +40,7 @@ describe('TodoMVC - React', function () {
     // which is automatically prepended to cy.visit
     //
     // https://on.cypress.io/api/visit
-    cy.visit('/', {
-      onBeforeLoad (win) {
-        win.initialState = []
-      }
-    })
+    cy.visit('/')
   })
 
   // a very simple example helpful during presentations
@@ -74,7 +70,6 @@ describe('TodoMVC - React', function () {
       //
       // http://on.cypress.io/get
       cy.get('.todo-list li').should('not.exist')
-      cy.get('.main').should('not.be.visible')
       cy.get('.footer').should('not.exist')
     })
   })
