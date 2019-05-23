@@ -1,0 +1,46 @@
+{
+  "name": "cypress-example-todomvc-redux",
+  "version": "1.0.0",
+  "description": "Example TodoMVC with full e2e test code coverage",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "cypress:open": "cypress open",
+    "serve": "parcel serve public/index.html",
+    "dev": "start-test serve 1234 cypress:open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cypress-io/cypress-example-todomvc-redux.git"
+  },
+  "keywords": [
+    "cypress",
+    "cypress-example",
+    "code-coverage"
+  ],
+  "author": "Gleb Bahmutov <gleb@cypress.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cypress-io/cypress-example-todomvc-redux/issues"
+  },
+  "homepage": "https://github.com/cypress-io/cypress-example-todomvc-redux#readme",
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/preset-react": "7.0.0",
+    "babel-plugin-istanbul": "5.1.4",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "cypress": "3.3.1",
+    "cypress-istanbul": "1.2.0",
+    "parcel-bundler": "1.12.3"
+  },
+  "dependencies": {
+    "classnames": "2.2.6",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-redux": "7.0.3",
+    "redux": "4.0.1",
+    "reselect": "4.0.0",
+    "todomvc-app-css": "2.2.0"
+  }
+}
