@@ -8,7 +8,8 @@
     "test": "start-test 1234 cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "start": "parcel serve public/index.html",
+    "start": "parcel-json-server -e public/index.html -d public/data.json -p 1234",
+    "start-old": "parcel serve public/index.html",
     "dev": "start-test 1234 cypress:open",
     "report:coverage": "nyc report --reporter=html",
     "report:coverage:text": "nyc report --reporter=text"
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@babel/core": "7.4.5",
     "@babel/preset-react": "7.0.0",
+    "@bahmutov/parcel-json-server": "1.0.1",
     "babel-plugin-istanbul": "5.1.4",
     "babel-plugin-transform-class-properties": "6.24.1",
     "cypress": "3.3.1",
