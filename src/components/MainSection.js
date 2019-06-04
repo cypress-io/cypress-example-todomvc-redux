@@ -14,7 +14,7 @@ const MainSection = ({ todosCount, completedCount, actions }) => (
           onClick={actions.completeAllTodos}
           onChange={actions.completeAllTodos}
         />
-        <label onClick={actions.completeAllTodos} />
+        <label data-cy-toggle-all onClick={actions.completeAllTodos} />
       </span>
     )}
     <VisibleTodoList />
