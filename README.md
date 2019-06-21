@@ -40,6 +40,10 @@ The report is a static site, you can drill into each folder to see individual so
 
 ![100% code coverage](images/100.png)
 
+## Warning
+
+Full code coverage is not the guarantee of exceptional quality. For example, the application might NOT work on mobile viewport, while working perfectly on desktop with 100% code coverage. See [cypress/integration/viewports-spec.js](cypress/integration/viewports-spec.js) for how to test main user stories across several viewports.
+
 ## License
 
 This project is licensed under the terms of the [MIT license](/LICENSE.md).
