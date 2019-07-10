@@ -19,3 +19,6 @@ workflows:
                 path: coverage
             # show code coverage numbers
             - run: npm run report:coverage:text
+            # send code coverage to coveralls.io
+            # https://coveralls.io/github/cypress-io/cypress-example-todomvc-redux
+            - run: npm run coveralls
