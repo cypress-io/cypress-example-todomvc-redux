@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/cypress-io/cypress-example-todomvc-redux#readme",
   "devDependencies": {
-    "@babel/core": "7.5.4",
+    "@babel/core": "7.5.5",
     "@babel/preset-react": "7.0.0",
     "babel-plugin-istanbul": "5.1.4",
     "babel-plugin-transform-class-properties": "6.24.1",
