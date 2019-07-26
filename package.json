@@ -15,7 +15,7 @@
     "dev": "start-test 1234 cypress:open",
     "report:coverage": "nyc report --reporter=html",
     "report:coverage:text": "nyc report --reporter=text",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
