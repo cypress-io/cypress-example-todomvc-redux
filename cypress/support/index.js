@@ -1,2 +1,2 @@
-import 'cypress-istanbul/support'
+import '@cypress/code-coverage/support'
 import './commands'
