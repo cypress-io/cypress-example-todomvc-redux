@@ -5,6 +5,8 @@ This example is a fork of the official [Redux TodoMVC example](https://github.co
 
 ## Install and use
 
+Because this project uses [Parcel bundler](https://parceljs.org) to serve the web application, it requires Node v12+
+
 ```shell
 npm ci
 npm test

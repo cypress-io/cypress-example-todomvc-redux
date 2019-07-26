@@ -4,6 +4,9 @@
   "description": "Example TodoMVC with full e2e test code coverage",
   "main": "index.js",
   "private": true,
+  "engines": {
+    "node": ">12"
+  },
   "scripts": {
     "test": "start-test 1234 cypress:run",
     "cypress:open": "cypress open",
