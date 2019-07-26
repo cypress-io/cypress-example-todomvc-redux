@@ -8,11 +8,11 @@
     "node": ">12"
   },
   "scripts": {
-    "test": "NODE_ENV=test start-test 1234 cypress:run",
+    "test": "start-test 1234 cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "start": "parcel serve --no-cache public/index.html",
-    "dev": "NODE_ENV=test start-test 1234 cypress:open",
+    "start": "NODE_ENV=test parcel serve --no-cache public/index.html",
+    "dev": "start-test 1234 cypress:open",
     "report:coverage": "nyc report --reporter=html",
     "report:coverage:text": "nyc report --reporter=text",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
