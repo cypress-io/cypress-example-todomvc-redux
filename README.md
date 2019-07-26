@@ -5,7 +5,7 @@ This example is a fork of the official [Redux TodoMVC example](https://github.co
 
 ## Install and use
 
-Because this project uses [Parcel bundler](https://parceljs.org) to serve the web application, it requires Node v12+
+Because this project uses [Parcel bundler](https://parceljs.org) to serve the web application, it requires Node v12+.
 
 ```shell
 npm ci
@@ -23,6 +23,30 @@ npm run report:coverage:text
 Application is served by [Parcel bundler](https://parceljs.org) that uses [.babelrc](.babelrc) file to load [babel-plugin-istanbul](https://github.com/istanbuljs/babel-plugin-istanbul) plugin. This plugin instruments the application source code. During tests [cypress-istanbul](https://github.com/cypress-io/cypress-istanbul) merges and saves application code coverage information, rendering the full HTML report at the end.
 
 Unit tests like [cypress/integration/selectors-spec.js](cypress/integration/selectors-spec.js) that reach into hard to test code paths are also instrumented using the same [.babelrc](.babelrc) file, and this additional code coverage is automatically added to the application code coverage.
+
+### .babelrc
+
+To always instrument the code using Babel and [babel-plugin-istanbul](https://github.com/istanbuljs/babel-plugin-istanbul) one can simply use the `istanbul` plugin
+
+```
+{
+  "plugins": ["istanbul"]
+}
+```
+
+But this will have instrumented code in the production bundle. To only instrument the code during tests, add the plugin to the `test` environment and serve with `NODE_ENV=test`
+
+```
+{
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  }
+}
+```
+
+Parceljs note: there are some issues with environment-specific plugins, see [PR #2840](https://github.com/parcel-bundler/parcel/pull/2840).
 
 ### Read
 
