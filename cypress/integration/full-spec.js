@@ -376,7 +376,7 @@ context('Mark all as completed', function () {
   })
 })
 
-context('Editing', function () {
+context.skip('Editing', function () {
   // New commands used here:
   // - cy.blur    https://on.cypress.io/api/blur
 
