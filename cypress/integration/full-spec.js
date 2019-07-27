@@ -461,7 +461,7 @@ context('Editing', function () {
   })
 })
 
-context('Clear completed button', function () {
+context.skip('Clear completed button', function () {
   beforeEach(visitWithInitialTodos)
 
   it('should display the correct text', function () {
