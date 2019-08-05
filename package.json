@@ -11,8 +11,8 @@
     "test": "start-test 1234 cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "start": "NODE_ENV=test parcel serve --no-cache public/index.html",
-    "dev": "NODE_ENV=test start-test 1234 cypress:open",
+    "start": "cross-env NODE_ENV=test parcel serve --no-cache public/index.html",
+    "dev": "cross-env NODE_ENV=test start-test 1234 cypress:open",
     "report:coverage": "nyc report --reporter=html",
     "report:coverage:text": "nyc report --reporter=text",
     "coveralls": "cat coverage/lcov.info | coveralls"
@@ -39,6 +39,7 @@
     "babel-plugin-istanbul": "5.2.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "3.0.5",
+    "cross-env": "5.2.0",
     "cypress": "3.4.1",
     "istanbul-lib-coverage": "2.0.5",
     "nyc": "14.1.1",
