@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "engines": {
-    "node": "12.10.0"
+    "node": "12.11.0"
   },
   "scripts": {
     "test": "start-test 1234 cypress:run",
