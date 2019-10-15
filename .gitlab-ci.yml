@@ -22,9 +22,8 @@ test:
     - npx cypress cache path
     - npx cypress cache list
     - npm run cypress:verify
-    # start the server in the background
-    - npm run start &
-    - npm run cypress:run -- --group "GitLab CI tests"
+    # start the server, wait for it to respond, then run Cypress tests
+    - npm test
     # print coverage summary
     - npx nyc report --reporter=text-summary
   artifacts:
