@@ -28,7 +28,6 @@ install:
     # useful to make sure we are not carrying around old versions
     - npx cypress cache path
     - npx cypress cache list
-    - $(npm bin)/print-env CI
     - npm run cypress:verify
 
 # all jobs that actually run tests can use the same definition
