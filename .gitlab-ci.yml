@@ -29,15 +29,12 @@ test:
     - ls -la
   artifacts:
     when: always
-    expire_in: 30 days
     paths:
+      # save both cypress artifacts and coverage results
       - coverage
-  artifacts:
-    when: always
-    paths:
       - cypress/videos/**/*.mp4
       - cypress/screenshots/**/*.png
-    expire_in: 1 day
+    expire_in: 10 days
 
 # store and publish code coverage HTML report folder
 # https://about.gitlab.com/blog/2016/11/03/publish-code-coverage-report-with-gitlab-pages/
