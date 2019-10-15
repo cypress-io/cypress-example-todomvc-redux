@@ -33,3 +33,4 @@ test:
       - cypress/screenshots/**/*.png
     expire_in: 1 day
   # todo: store code coverage HTML report folder
+  # https://about.gitlab.com/blog/2016/11/03/publish-code-coverage-report-with-gitlab-pages/
