@@ -26,6 +26,7 @@ test:
     - npm test
     # print coverage summary
     - npx nyc report --reporter=text-summary
+    - ls -la
   artifacts:
     when: always
     paths:
@@ -40,6 +41,7 @@ pages:
   dependencies:
     - test
   script:
+    - ls -la
     - mv coverage/lcov-report/ public/
   artifacts:
     paths:
