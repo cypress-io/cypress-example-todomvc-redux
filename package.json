@@ -11,6 +11,7 @@
     "test": "start-test 1234 cypress:run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "cypress:verify": "cypress verify",
     "start": "cross-env NODE_ENV=test parcel serve --no-cache public/index.html",
     "dev": "cross-env NODE_ENV=test start-test 1234 cypress:open",
     "report:coverage": "nyc report --reporter=html",

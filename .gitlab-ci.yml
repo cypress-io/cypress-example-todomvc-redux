@@ -1,0 +1,36 @@
+# to cache both npm modules and Cypress binary we use environment variables
+# to point at the folders we can list as paths in "cache" job settings
+variables:
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+
+# cache using branch name
+# https://gitlab.com/help/ci/caching/index.md
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm
+    - cache/Cypress
+
+# this job installs NPM dependencies and Cypress
+test:
+  image: cypress/base:10
+  script:
+    - npm ci
+    # check Cypress binary path and cached versions
+    # useful to make sure we are not carrying around old versions
+    - npx cypress cache path
+    - npx cypress cache list
+    - npm run cypress:verify
+    # start the server, wait for it to respond, then run Cypress tests
+    - npm test
+    # print coverage summary
+    - npx nyc report --reporter=text-summary
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 day
+  # todo: store code coverage HTML report folder
+  # https://about.gitlab.com/blog/2016/11/03/publish-code-coverage-report-with-gitlab-pages/
