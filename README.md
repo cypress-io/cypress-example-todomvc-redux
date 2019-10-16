@@ -7,6 +7,8 @@ This example is a fork of the official [Redux TodoMVC example](https://github.co
 
 [![pipeline status](https://gitlab.com/cypress-io/cypress-example-todomvc-redux/badges/master/pipeline.svg)](https://gitlab.com/cypress-io/cypress-example-todomvc-redux/commits/master) [![coverage report](https://gitlab.com/cypress-io/cypress-example-todomvc-redux/badges/master/coverage.svg)](https://gitlab.com/cypress-io/cypress-example-todomvc-redux/commits/master)
 
+Deployed coverage report is at [https://cypress-io.gitlab.io/cypress-example-todomvc-redux/](https://cypress-io.gitlab.io/cypress-example-todomvc-redux/)
+
 ## Install and use
 
 Because this project uses [Parcel bundler](https://parceljs.org) to serve the web application, it requires Node v12+.

@@ -23,8 +23,9 @@ test:
     - npx cypress cache list
     - npm run cypress:verify
     # start the server, wait for it to respond, then run Cypress tests
-    - npm test
-    # print coverage summary
+    - NODE_ENV=test npm test
+    # print coverage summary so that GitLab CI can parse the coverage number
+    # from a string like "Statements   : 100% ( 135/135 )"
     - npx nyc report --reporter=text-summary
     - ls -la
   artifacts:
@@ -38,6 +39,8 @@ test:
 
 # store and publish code coverage HTML report folder
 # https://about.gitlab.com/blog/2016/11/03/publish-code-coverage-report-with-gitlab-pages/
+# the coverage report will be available both as a job artifact
+# and at https://cypress-io.gitlab.io/cypress-example-todomvc-redux/
 pages:
   stage: deploy
   dependencies:
