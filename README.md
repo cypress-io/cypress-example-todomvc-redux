@@ -7,7 +7,7 @@ This example is a fork of the official [Redux TodoMVC example](https://github.co
 
 [![pipeline status](https://gitlab.com/cypress-io/cypress-example-todomvc-redux/badges/master/pipeline.svg)](https://gitlab.com/cypress-io/cypress-example-todomvc-redux/commits/master) [![coverage report](https://gitlab.com/cypress-io/cypress-example-todomvc-redux/badges/master/coverage.svg)](https://gitlab.com/cypress-io/cypress-example-todomvc-redux/commits/master)
 
-Deployed coverage report is at [https://cypress-io.gitlab.io/cypress-example-todomvc-redux/](https://cypress-io.gitlab.io/cypress-example-todomvc-redux/)
+Deployed coverage report is at [https://cypress-io.gitlab.io/cypress-example-todomvc-redux/](https://cypress-io.gitlab.io/cypress-example-todomvc-redux/), generated following this [GitLab coverage guide](https://about.gitlab.com/blog/2016/11/03/publish-code-coverage-report-with-gitlab-pages/).
 
 ## Install and use
 
