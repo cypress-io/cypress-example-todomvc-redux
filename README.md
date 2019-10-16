@@ -26,7 +26,7 @@ npm run report:coverage:text
 
 ## How it works
 
-Application is served by [Parcel bundler](https://parceljs.org) that uses [.babelrc](.babelrc) file to load [babel-plugin-istanbul](https://github.com/istanbuljs/babel-plugin-istanbul) plugin. This plugin instruments the application source code. During tests [cypress-istanbul](https://github.com/cypress-io/cypress-istanbul) merges and saves application code coverage information, rendering the full HTML report at the end.
+Application is served by [Parcel bundler](https://parceljs.org) that uses [.babelrc](.babelrc) file to load [babel-plugin-istanbul](https://github.com/istanbuljs/babel-plugin-istanbul) plugin. This plugin instruments the application source code. During tests [@cypress/code-coverage](https://github.com/cypress-io/code-coverage) plugin merges and saves application code coverage information, rendering the full HTML report at the end.
 
 Unit tests like [cypress/integration/selectors-spec.js](cypress/integration/selectors-spec.js) that reach into hard to test code paths are also instrumented using the same [.babelrc](.babelrc) file, and this additional code coverage is automatically added to the application code coverage.
 
@@ -54,13 +54,16 @@ But this will have instrumented code in the production bundle. To only instrumen
 
 Parceljs note: there are some issues with environment-specific plugins, see [PR #2840](https://github.com/parcel-bundler/parcel/pull/2840).
 
-### Read
+### More info
+
+- [Cypress code coverage guide](https://on.cypress.io/code-coverage)
+- watch [Code coverage webinar](https://youtu.be/C8g5X4vCZJA), [slides](https://cypress.slides.com/cypress-io/complete-code-coverage-with-cypress)
+
+There are also separate blog posts
 
 - [Code Coverage for End-to-end Tests](https://glebbahmutov.com/blog/code-coverage-for-e2e-tests/)
 - [Code Coverage by Parcel Bundler](https://glebbahmutov.com/blog/code-coverage-by-parcel/)
 - [Combined End-to-end and Unit Test Coverage](https://glebbahmutov.com/blog/combined-end-to-end-and-unit-test-coverage/)
-
-The official Cypress documentation guide to code coverage is coming, follow issue [#1705](https://github.com/cypress-io/cypress-documentation/issues/1705)
 
 ## CircleCI
 
