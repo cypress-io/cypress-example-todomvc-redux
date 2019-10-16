@@ -43,8 +43,11 @@ pages:
   dependencies:
     - test
   script:
+    # delete everything in the current public folder
+    # and replace with code coverage HTML report
+    - rm -rf public/*
     - ls -la
-    - mv coverage/lcov-report/ public/
+    - cp -r coverage/lcov-report/* public/
   artifacts:
     paths:
       - public
