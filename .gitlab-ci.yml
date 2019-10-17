@@ -24,6 +24,8 @@ test:
     - npm run cypress:verify
     # start the server, wait for it to respond, then run Cypress tests
     - NODE_ENV=test npm test
+    # print all files in "cypress" folder
+    - ls -laR cypress
     # print coverage summary so that GitLab CI can parse the coverage number
     # from a string like "Statements   : 100% ( 135/135 )"
     - npx nyc report --reporter=text-summary
@@ -40,19 +42,18 @@ test:
 # https://about.gitlab.com/blog/2016/11/03/publish-code-coverage-report-with-gitlab-pages/
 # the coverage report will be available both as a job artifact
 # and at https://cypress-io.gitlab.io/cypress-example-todomvc-redux/
-# pages:
-#   stage: deploy
-#   dependencies:
-#     - test
-#   script:
-#     # delete everything in the current public folder
-#     # and replace with code coverage HTML report
-#     - rm -rf public/*
-#     - ls -la
-#     - cp -r coverage/lcov-report/* public/
-#   artifacts:
-#     paths:
-#       - public
-#     expire_in: 30 days
-#   only:
-#     - master
+pages:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    # delete everything in the current public folder
+    # and replace with code coverage HTML report
+    - rm -rf public/*
+    - cp -r coverage/lcov-report/* public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master
