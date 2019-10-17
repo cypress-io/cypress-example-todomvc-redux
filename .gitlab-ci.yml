@@ -34,8 +34,8 @@ test:
     paths:
       # save both cypress artifacts and coverage results
       - coverage
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
+      - cypress/videos/*.mp4
+      - cypress/screenshots/*.png
     expire_in: 10 days
 
 # store and publish code coverage HTML report folder
