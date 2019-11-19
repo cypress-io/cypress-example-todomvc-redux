@@ -79,6 +79,14 @@ The report is a static site, you can drill into each folder to see individual so
 
 Full code coverage is not the guarantee of exceptional quality. For example, the application might NOT work on mobile viewport, while working perfectly on desktop with 100% code coverage. See [cypress/integration/viewports-spec.js](cypress/integration/viewports-spec.js) for how to test main user stories across several viewports.
 
+## Smoke tests
+
+As an example, there is a reusable smoke test [cypress/integration/smoke.js](cypress/integration/smoke.js) that goes through the most important parts of the app, covering 84% of the source code. This test can be reused from other tests, for example from [cypress/integration/smoke-spec.js](cypress/integration/smoke-spec.js), that can be executed after deploy for example by using [cypress-smoke.json](cypress-smoke.json) config file
+
+```shell
+npx cypress run --config-file cypress-smoke.json
+```
+
 ## License
 
 This project is licensed under the terms of the [MIT license](/LICENSE.md).

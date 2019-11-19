@@ -2,7 +2,8 @@
   "baseUrl": "http://localhost:1234",
   "ignoreTestFiles": [
     "**/*.snap",
-    "**/__snapshot__/*"
+    "**/__snapshot__/*",
+    "**/smoke.js"
   ],
   "env": {
     "cypress-plugin-snapshots": {},
