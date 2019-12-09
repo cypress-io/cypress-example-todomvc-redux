@@ -6,5 +6,6 @@ it('adds todos', () => {
     .type('write code{enter}')
     .type('write tests{enter}')
     .type('deploy{enter}')
-  cy.get('.todo').should('have.length', 3)
+  cy.get('.todo') // command
+    .should('have.length', 3) // assertion
 })
