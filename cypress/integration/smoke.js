@@ -14,9 +14,7 @@ export const smokeTest = () => {
   cy.get('.todo').should('have.length', 3)
 
   cy.log('1st todo has been done')
-  cy.get('.todo')
-    .first()
-    .find('.toggle')
+  cy.get('.todo').first().find('.toggle')
     .check()
   cy.get('.todo')
     .first()
@@ -24,17 +22,13 @@ export const smokeTest = () => {
 
   cy.log('by default "All" filter is active')
   cy.contains('.filters a.selected', 'All').should('be.visible')
-  cy.contains('.filters a', 'Active')
-    .click()
-    .should('have.class', 'selected')
-    .should('be.visible')
+  cy.contains('.filters a', 'Active').click()
+    .should('have.class', 'selected').and('be.visible')
   cy.get('.todo').should('have.length', 2)
 
   cy.log('check "Completed" todos')
-  cy.contains('.filters a', 'Completed')
-    .click()
-    .should('have.class', 'selected')
-    .should('be.visible')
+  cy.contains('.filters a', 'Completed').click()
+    .should('have.class', 'selected').and('be.visible')
   cy.get('.todo').should('have.length', 1)
 
   cy.log('remove completed todos')
@@ -43,6 +37,6 @@ export const smokeTest = () => {
   cy.contains('.filters a', 'All')
     .click()
     .should('have.class', 'selected')
-    .should('be.visible')
+    .and('be.visible')
   cy.get('.todo').should('have.length', 2)
 }
