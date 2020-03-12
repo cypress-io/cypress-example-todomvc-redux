@@ -1,12 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
 import 'todomvc-app-css/index.css'
 import App from './components/App'
-import reducer from './reducers'
+import {store} from './store'
 
-const store = createStore(reducer)
+if (window.Cypress) {
+  if (window.skipRender) {
+    return
+  }
+}
 
 render(
   <Provider store={store}>
@@ -14,9 +17,3 @@ render(
   </Provider>,
   document.getElementById('root')
 )
-
-// expose store during tests
-/* istanbul ignore else */
-if (window.Cypress) {
-  window.store = store
-}
