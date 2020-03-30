@@ -41,7 +41,7 @@
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "3.0.11",
     "cross-env": "6.0.3",
-    "cypress": "4.2.0",
+    "cypress": "4.3.0",
     "istanbul-lib-coverage": "3.0.0",
     "parcel-bundler": "1.12.4",
     "start-server-and-test": "1.10.11"
