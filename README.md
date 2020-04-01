@@ -87,6 +87,16 @@ As an example, there is a reusable smoke test [cypress/integration/smoke.js](cyp
 npx cypress run --config-file cypress-smoke.json
 ```
 
+## Component tests
+
+Unit (individual JS functions) and component tests (React components) can be run without any server.
+
+```shell
+$ npx cypress open --config-file cypress-unit.json
+```
+
+These tests leave alongside Jest tests in [src](src) folder and are named `*.cy-spec.js`. Implemented using [cypress-react-unit-test](https://github.com/bahmutov/cypress-react-unit-test).
+
 ## License
 
 This project is licensed under the terms of the [MIT license](/LICENSE.md).
