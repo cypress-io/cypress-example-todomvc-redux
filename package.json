@@ -38,7 +38,7 @@
     "@babel/core": "7.9.0",
     "@babel/preset-react": "7.9.4",
     "@cypress/code-coverage": "2.0.0",
-    "babel-plugin-istanbul": "5.2.0",
+    "babel-plugin-istanbul": "6.0.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "3.0.11",
     "cross-env": "7.0.2",
