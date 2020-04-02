@@ -23,7 +23,9 @@ const setup = propOverrides => {
   cy.mount(
     <Provider store={store}>
       <MainSection {...props} />
-    </Provider>
+    </Provider>,
+    null,
+    { cssFile: 'node_modules/todomvc-app-css/index.css' }
   )
 }
 
@@ -52,7 +54,7 @@ describe('components', () => {
 
       it('should call completeAllTodos on change', () => {
         setup()
-        cy.get('input[type=checkbox]').click()
+        cy.get('input[type=checkbox]').click({ force: true })
         cy.get('@completeAll').should('be.called')
       })
     })

@@ -34,7 +34,9 @@ const setup = () => {
   cy.mount(
     <Provider store={store}>
       <TodoList {...props} />
-    </Provider>
+    </Provider>,
+    null,
+    { cssFile: 'node_modules/todomvc-app-css/index.css' }
   )
 }
 

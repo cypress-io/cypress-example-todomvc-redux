@@ -19,10 +19,17 @@ const setup = ( editing = false ) => {
     completeTodo: cy.stub().as('completeTodo')
   }
 
+  // because our CSS styles are global, they assume
+  // each todo item is inside ".todo-list" element
+  // simple: place TodoItem in a <ul class="todo-list>
   cy.mount(
     <Provider store={store}>
-      <TodoItem {...props} />
-    </Provider>
+      <ul class="todo-list">
+        <TodoItem {...props} />
+      </ul>
+    </Provider>,
+    null,
+    { cssFile: 'node_modules/todomvc-app-css/index.css' }
   )
 
   if (editing) {
@@ -54,7 +61,8 @@ describe('components', () => {
 
     it('button onClick should call deleteTodo', () => {
       setup()
-      cy.get('.destroy').click()
+      // button only becomes visible on hover
+      cy.get('.destroy').click({force: true})
       cy.get('@delete').should('have.been.calledWith', 0)
     })
 
