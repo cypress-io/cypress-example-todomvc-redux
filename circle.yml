@@ -6,12 +6,12 @@ workflows:
   build:
     jobs:
       - cypress/install:
-          name: Install 📦
+          name: Install
 
       - cypress/run:
-          name: full tests 🧪
+          name: full tests
           requires:
-            - Install 📦
+            - Install
           install-command: echo 'Nothing to install in this job'
           # we need to start the web application
           start: npm start
@@ -32,18 +32,18 @@ workflows:
             - run: npm run coveralls
 
       - cypress/run:
-          name: component tests 🧱
+          name: component tests
           requires:
-            - Install 📦
+            - Install
           install-command: echo 'Nothing to install in this job'
           command: npx cypress run --config-file cypress-unit.json
           no-workspace: true
 
 
       - cypress/run:
-          name: smoke tests 💨
+          name: smoke tests
           requires:
-            - Install 📦
+            - Install
           install-command: echo 'Nothing to install in this job'
           # we will only run smoke tests on master branch
           filters:
