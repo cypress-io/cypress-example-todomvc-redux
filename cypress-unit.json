@@ -1,0 +1,10 @@
+{
+  "$schema":"https://on.cypress.io/cypress.schema.json",
+  "pluginsFile": false,
+  "fixturesFolder": false,
+  "supportFile": "cypress/support/unit.js",
+  "integrationFolder": "src",
+  "testFiles": "**/*.cy-spec.js",
+  "viewportWidth": 300,
+  "viewportHeight": 300
+}

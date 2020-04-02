@@ -5,8 +5,14 @@ orbs:
 workflows:
   build:
     jobs:
+      - cypress/install:
+          name: Install 📦
+
       - cypress/run:
-          name: full tests
+          name: full tests 🧪
+          requires:
+            - Install 📦
+          install-command: echo 'Nothing to install in this job'
           # we need to start the web application
           start: npm start
           command: NODE_ENV=test npm run cypress:run
@@ -25,9 +31,20 @@ workflows:
             # https://coveralls.io/github/cypress-io/cypress-example-todomvc-redux
             - run: npm run coveralls
 
+      - cypress/run:
+          name: component tests 🧱
+          requires:
+            - Install 📦
+          install-command: echo 'Nothing to install in this job'
+          command: npx cypress run --config-file cypress-unit.json
+          no-workspace: true
+
 
       - cypress/run:
-          name: smoke tests
+          name: smoke tests 💨
+          requires:
+            - Install 📦
+          install-command: echo 'Nothing to install in this job'
           # we will only run smoke tests on master branch
           filters:
             branches:
@@ -35,6 +52,4 @@ workflows:
                 - master
           start: npm start
           command: NODE_ENV=test npx cypress run --config-file cypress-smoke.json
-          # there are no jobs to follow this one
-          # so no need to save the workspace files (saves time)
           no-workspace: true
