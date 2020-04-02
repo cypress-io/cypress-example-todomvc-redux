@@ -89,7 +89,7 @@ npx cypress run --config-file cypress-smoke.json
 
 ## Component tests
 
-Unit (individual JS functions) and component tests (React components) can be run without any server. There is no need to set anything up, this project work right out of the box without any additional steps, except you need to add `import 'cypress-react-unit-test'` to Cypress support file.
+Unit (individual JS functions) and component tests (React components) can be run without any server. There is no need to set anything up, this project works right out of the box without any additional steps, except you need to add `import 'cypress-react-unit-test'` to your Cypress [`supportFile`](https://on.cypress.io/configuration#Folders-Files).
 
 ```shell
 $ npx cypress open --config-file cypress-unit.json
