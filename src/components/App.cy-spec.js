@@ -20,7 +20,6 @@ describe('components', () => {
           <App></App>
         </div>
       </Provider>,
-      null,
       { cssFile: 'node_modules/todomvc-app-css/index.css' }
     )
   }

@@ -24,7 +24,6 @@ const setup = propOverrides => {
     <Provider store={store}>
       <MainSection {...props} />
     </Provider>,
-    null,
     { cssFile: 'node_modules/todomvc-app-css/index.css' }
   )
 }

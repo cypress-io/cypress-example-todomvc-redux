@@ -28,7 +28,6 @@ const setup = ( editing = false ) => {
         <TodoItem {...props} />
       </ul>
     </Provider>,
-    null,
     { cssFile: 'node_modules/todomvc-app-css/index.css' }
   )
 

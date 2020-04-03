@@ -35,7 +35,6 @@ const setup = () => {
     <Provider store={store}>
       <TodoList {...props} />
     </Provider>,
-    null,
     { cssFile: 'node_modules/todomvc-app-css/index.css' }
   )
 }
