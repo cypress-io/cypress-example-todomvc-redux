@@ -1,22 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import {StoreProvider} from './store'
 import 'todomvc-app-css/index.css'
 import App from './components/App'
-import reducer from './reducers'
-
-const store = createStore(reducer)
 
 render(
-  <Provider store={store}>
+  <StoreProvider>
     <App />
-  </Provider>,
+  </StoreProvider>,
   document.getElementById('root')
 )
-
-// expose store during tests
-/* istanbul ignore else */
-if (window.Cypress) {
-  window.store = store
-}

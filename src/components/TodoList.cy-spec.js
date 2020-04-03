@@ -1,11 +1,8 @@
 import React from 'react'
 import TodoList from './TodoList'
-
-// we are making mini application - thus we need a store!
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducer from '../reducers'
-const store = createStore(reducer)
+// an alternative to boilerplate code
+// re-use app's store creation method
+import {StoreProvider} from '../store'
 
 const setup = () => {
   const props = {
@@ -32,9 +29,9 @@ const setup = () => {
   }
 
   cy.mount(
-    <Provider store={store}>
+    <StoreProvider>
       <TodoList {...props} />
-    </Provider>,
+    </StoreProvider>,
     { cssFile: 'node_modules/todomvc-app-css/index.css' }
   )
 }

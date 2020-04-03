@@ -1,11 +1,6 @@
 import React from 'react'
 import TodoItem from './TodoItem'
-
-// we are making mini application - thus we need a store!
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducer from '../reducers'
-const store = createStore(reducer)
+import {StoreProvider} from '../store'
 
 const setup = ( editing = false ) => {
   const props = {
@@ -23,11 +18,11 @@ const setup = ( editing = false ) => {
   // each todo item is inside ".todo-list" element
   // simple: place TodoItem in a <ul class="todo-list>
   cy.mount(
-    <Provider store={store}>
-      <ul class="todo-list">
+    <StoreProvider>
+      <ul className="todo-list">
         <TodoItem {...props} />
       </ul>
-    </Provider>,
+    </StoreProvider>,
     { cssFile: 'node_modules/todomvc-app-css/index.css' }
   )
 
