@@ -6,8 +6,5 @@
   "integrationFolder": "src",
   "testFiles": "**/*.cy-spec.js",
   "viewportWidth": 300,
-  "viewportHeight": 300,
-  "env": {
-    "coverage": false
-  }
+  "viewportHeight": 300
 }
