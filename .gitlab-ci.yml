@@ -1,7 +1,7 @@
 # to cache both npm modules and Cypress binary we use environment variables
 # to point at the folders we can list as paths in "cache" job settings
 variables:
-  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  YARN_CACHE_DIR: "$CI_PROJECT_DIR/cache/yarn"
   CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
 
 # cache using branch name
@@ -9,14 +9,14 @@ variables:
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-    - .npm
+    - cache/yarn
     - cache/Cypress
 
 # this job installs NPM dependencies and Cypress
 test:
-  image: cypress/base:10
+  image: cypress/base:12.16.1
   script:
-    - npm ci
+    - yarn install --frozen-lockfile
     # check Cypress binary path and cached versions
     # useful to make sure we are not carrying around old versions
     - npx cypress cache path

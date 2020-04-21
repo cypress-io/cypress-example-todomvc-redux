@@ -7,9 +7,12 @@ workflows:
     jobs:
       - cypress/install:
           name: Install
+          yarn: true
+          executor: cypress/base-12-14-0
 
       - cypress/run:
           name: full tests
+          executor: cypress/base-12-14-0
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
@@ -33,6 +36,7 @@ workflows:
 
       - cypress/run:
           name: component tests
+          executor: cypress/base-12-14-0
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
@@ -42,6 +46,7 @@ workflows:
 
       - cypress/run:
           name: smoke tests
+          executor: cypress/base-12-14-0
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
