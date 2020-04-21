@@ -7,6 +7,7 @@ workflows:
     jobs:
       - cypress/install:
           name: Install
+          yarn: true
 
       - cypress/run:
           name: full tests
