@@ -14,14 +14,14 @@ Deployed coverage report is at [https://cypress-io.gitlab.io/cypress-example-tod
 Because this project uses [Parcel bundler](https://parceljs.org) to serve the web application, it requires Node v12+.
 
 ```shell
-npm ci
-npm test
+yarn
+yarn test
 ```
 
 The full code coverage HTML report will be saved in `coverage`. You can also see text summary by running
 
 ```shell
-npm run report:coverage:text
+yarn report:coverage:text
 ```
 
 ## How it works
