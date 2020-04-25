@@ -990,6 +990,30 @@
     through2 "^2.0.0"
     watchify "3.11.1"
 
+"@cypress/browserify-preprocessor@2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@cypress/browserify-preprocessor/-/browserify-preprocessor-2.2.2.tgz#2db0067aea8bd6e98ac29bd331c05bad387608ba"
+  integrity sha512-uESobQlfv68GRKDokhBM5i47ZEwBBWS8zqFYFFBWVjv3KcXHpeReTXMPY/x1DljIO3RYRAxUsPJkh8vxhpRwNA==
+  dependencies:
+    "@babel/core" "7.4.5"
+    "@babel/plugin-proposal-class-properties" "7.3.0"
+    "@babel/plugin-proposal-object-rest-spread" "7.3.2"
+    "@babel/plugin-transform-runtime" "7.2.0"
+    "@babel/preset-env" "7.4.5"
+    "@babel/preset-react" "7.0.0"
+    "@babel/runtime" "7.3.1"
+    babel-plugin-add-module-exports "1.0.2"
+    babelify "10.0.0"
+    bluebird "3.5.3"
+    browserify "16.2.3"
+    coffeeify "3.0.1"
+    coffeescript "1.12.7"
+    debug "4.1.1"
+    fs-extra "7.0.1"
+    lodash.clonedeep "4.5.0"
+    through2 "^2.0.0"
+    watchify "3.11.1"
+
 "@cypress/code-coverage@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.0.0.tgz#9807eb0a941df5070a9801726a56ab7705c478df"
@@ -1001,12 +1025,12 @@
     istanbul-lib-coverage "3.0.0"
     nyc "15.0.1"
 
-"@cypress/code-coverage@3.5.2":
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.5.2.tgz#71d6fc790d367b517e945c868d9cdefd879fc246"
-  integrity sha512-xEBvZuVCal3nozw2+nr3NW5x80NJ9gqMKy6HY4kflTgl/h7WOhXVWfGbAlt4Fz3IA+1vIEGE2ntDcjFn7WHEmg==
+"@cypress/code-coverage@3.5.3":
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.5.3.tgz#c2ebb394ef4358f8c212ba8018f692bd661a0909"
+  integrity sha512-oAeV2jcBKBws/hZ+7NoN6g9EymtJw6LoDx8bmm7MrI2q1cPcucUpGVnpQtqKiOfxjdCH7/YttfQr2xPmv+NNNw==
   dependencies:
-    "@cypress/browserify-preprocessor" "2.2.1"
+    "@cypress/browserify-preprocessor" "2.2.2"
     debug "4.1.1"
     execa "4.0.0"
     globby "11.0.0"
