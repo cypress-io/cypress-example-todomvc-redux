@@ -1095,10 +1095,10 @@
     istanbul-lib-coverage "3.0.0"
     nyc "15.0.1"
 
-"@cypress/code-coverage@3.7.2":
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.7.2.tgz#6d8371cdce595c77c1c6f8faddaf0724fa15ce32"
-  integrity sha512-DEcM8kcObqwX9LoS2aLU1JYm8MQG66WSjBbt/mtq8IuzXTVEeAwfd8ctDrRs9vaDPGqttqpTdcpumhnwIAC95Q==
+"@cypress/code-coverage@3.7.3":
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.7.3.tgz#2ef7f1c37e2073b0a85e268aa01d2f9670c6256c"
+  integrity sha512-KKn/r/6SN4N/p5oMxJJiPICENsXjDJ04BlRhM+TCxSC/T9hkFtXiWqGaaxPGhT8uobDBM7T9XQpaZVHo7cxqJg==
   dependencies:
     "@cypress/browserify-preprocessor" "2.2.3"
     debug "4.1.1"
