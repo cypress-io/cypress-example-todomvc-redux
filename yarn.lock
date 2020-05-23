@@ -1095,14 +1095,14 @@
     istanbul-lib-coverage "3.0.0"
     nyc "15.0.1"
 
-"@cypress/code-coverage@3.7.4":
-  version "3.7.4"
-  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.7.4.tgz#c8cd816af47ba6612b559ffb2d0b0709c3e3aef1"
-  integrity sha512-qOiPYzamTQ81mETMzz5A/72MxQWnz93R60TN2v0o2XbUkBws5yxkLSoKjhBdYmunrOttKlZ/H7TY7EQsOwXi1g==
+"@cypress/code-coverage@3.7.5":
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.7.5.tgz#d290cda9a5e0bcd07a9836215f80ae9e02b6c487"
+  integrity sha512-ryqqNygTmBG2VcjIQt0DzRjDOKkCRi+uURAYGdVFGE3eEkzASMCMx4dR0EGJTJEqUVUR4zCtRhNgEpgYPA3kkQ==
   dependencies:
     "@cypress/browserify-preprocessor" "2.2.4"
     debug "4.1.1"
-    execa "4.0.1"
+    execa "4.0.2"
     globby "11.0.0"
     istanbul-lib-coverage "3.0.0"
     nyc "15.0.1"
@@ -3337,10 +3337,10 @@ execa@4.0.0:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
-execa@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/execa/-/execa-4.0.1.tgz#988488781f1f0238cd156f7aaede11c3e853b4c1"
-  integrity sha512-SCjM/zlBdOK8Q5TIjOn6iEHZaPHFsMoTxXQ2nvUvtPnuohz3H2dIozSg+etNR98dGoYUp2ENSKLL/XaMmbxVgw==
+execa@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-4.0.2.tgz#ad87fb7b2d9d564f70d2b62d511bee41d5cbb240"
+  integrity sha512-QI2zLa6CjGWdiQsmSkZoGtDx2N+cQIGb3yNolGTdjSQzydzLgYYf8LRuagp7S7fPimjcrzUDSUFd/MgzELMi4Q==
   dependencies:
     cross-spawn "^7.0.0"
     get-stream "^5.0.0"
