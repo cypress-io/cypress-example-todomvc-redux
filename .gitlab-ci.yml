@@ -14,7 +14,7 @@ cache:
 
 # this job installs NPM dependencies and Cypress
 test:
-  image: cypress/base:12.16.2
+  image: cypress/base:12.18.0
   script:
     - yarn install --frozen-lockfile
     # check Cypress binary path and cached versions
