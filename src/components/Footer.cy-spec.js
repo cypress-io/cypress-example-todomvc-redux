@@ -1,6 +1,8 @@
+/// <reference types="cypress" />
 // compare to tests in "Footer.spec.js"
 import React from 'react'
 import Footer from './Footer'
+import { mount } from 'cypress-react-unit-test'
 
 // we are making mini application - thus we need a store!
 import { Provider } from 'react-redux'
@@ -15,7 +17,7 @@ const setup = propOverrides => {
     onClearCompleted: cy.stub().as('clear'),
   }, propOverrides)
 
-  cy.mount(
+  mount(
     <Provider store={store}>
       <Footer {...props} />
     </Provider>

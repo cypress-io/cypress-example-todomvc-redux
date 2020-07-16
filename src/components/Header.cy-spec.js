@@ -1,6 +1,7 @@
+/// <reference types="cypress" />
 import React from 'react'
 import Header from './Header'
-
+import {mount} from 'cypress-react-unit-test'
 // we are making mini application - thus we need a store!
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
@@ -13,7 +14,7 @@ describe('components', () => {
       const props = {
         addTodo: cy.stub().as('addTodo')
       }
-      cy.mount(
+      mount(
         <Provider store={store}>
           <Header {...props} />
         </Provider>

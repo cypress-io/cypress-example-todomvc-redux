@@ -1,10 +1,11 @@
 {
-  "$schema":"https://on.cypress.io/cypress.schema.json",
+  "$schema": "https://on.cypress.io/cypress.schema.json",
   "pluginsFile": false,
   "fixturesFolder": false,
   "supportFile": "node_modules/cypress-react-unit-test/support",
-  "integrationFolder": "src",
   "testFiles": "**/*.cy-spec.js",
   "viewportWidth": 300,
-  "viewportHeight": 300
+  "viewportHeight": 300,
+  "experimentalComponentTesting": true,
+  "componentFolder": "src/components"
 }
