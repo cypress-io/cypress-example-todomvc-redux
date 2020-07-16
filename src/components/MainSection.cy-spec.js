@@ -1,5 +1,7 @@
+/// <reference types="cypress" />
 import React from 'react'
 import MainSection from './MainSection'
+import { mount } from 'cypress-react-unit-test'
 
 // we are making mini application - thus we need a store!
 import { Provider } from 'react-redux'
@@ -20,7 +22,7 @@ const setup = propOverrides => {
     }
   }, propOverrides)
 
-  cy.mount(
+  mount(
     <Provider store={store}>
       <MainSection {...props} />
     </Provider>,

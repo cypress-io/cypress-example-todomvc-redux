@@ -1,8 +1,10 @@
+/// <reference types="cypress" />
 import React from 'react'
 import TodoList from './TodoList'
 // an alternative to boilerplate code
 // re-use app's store creation method
-import {StoreProvider} from '../store'
+import { StoreProvider } from '../store'
+import {mount} from 'cypress-react-unit-test'
 
 const setup = () => {
   const props = {
@@ -28,7 +30,7 @@ const setup = () => {
     }
   }
 
-  cy.mount(
+  mount(
     <StoreProvider>
       <TodoList {...props} />
     </StoreProvider>,

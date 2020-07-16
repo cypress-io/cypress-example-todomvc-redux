@@ -1,6 +1,8 @@
+/// <reference types="cypress" />
 import React from 'react'
 import TodoItem from './TodoItem'
-import {StoreProvider} from '../store'
+import { StoreProvider } from '../store'
+import {mount} from 'cypress-react-unit-test'
 
 const setup = ( editing = false ) => {
   const props = {
@@ -17,7 +19,7 @@ const setup = ( editing = false ) => {
   // because our CSS styles are global, they assume
   // each todo item is inside ".todo-list" element
   // simple: place TodoItem in a <ul class="todo-list>
-  cy.mount(
+  mount(
     <StoreProvider>
       <ul className="todo-list">
         <TodoItem {...props} />

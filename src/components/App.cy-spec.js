@@ -1,7 +1,8 @@
+/// <reference types="cypress" />
 // compare to App.spec.js
 import React from 'react'
 import App from './App'
-
+import {mount} from 'cypress-react-unit-test'
 // we are making mini application - thus we need a store!
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
@@ -14,7 +15,7 @@ describe('components', () => {
     cy.viewport(600, 700)
     // our CSS styles assume the app is inside
     // a DIV element with class "todoapp"
-    cy.mount(
+    mount(
       <Provider store={store}>
         <div className="todoapp">
           <App></App>

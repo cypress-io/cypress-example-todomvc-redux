@@ -16,6 +16,7 @@
     "dev": "cross-env NODE_ENV=test start-test 1234 cypress:open",
     "report:coverage": "nyc report --reporter=html",
     "report:coverage:text": "nyc report --reporter=text",
+    "report:coverage:summary": "nyc report --reporter=text-summary",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "component": "npx cypress open --config-file cypress-unit.json"
   },
@@ -43,7 +44,7 @@
     "coveralls": "3.1.0",
     "cross-env": "7.0.2",
     "cypress": "4.10.0",
-    "cypress-react-unit-test": "3.3.1",
+    "cypress-react-unit-test": "4.10.0",
     "istanbul-lib-coverage": "3.0.0",
     "parcel-bundler": "1.12.4",
     "start-server-and-test": "1.11.2"
