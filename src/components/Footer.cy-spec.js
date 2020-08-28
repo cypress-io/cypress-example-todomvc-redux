@@ -6,16 +6,17 @@ import { mount } from 'cypress-react-unit-test'
 
 // we are making mini application - thus we need a store!
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducer from '../reducers'
-const store = createStore(reducer)
+import { store } from '../store'
 
-const setup = propOverrides => {
-  const props = Object.assign({
-    completedCount: 0,
-    activeCount: 0,
-    onClearCompleted: cy.stub().as('clear'),
-  }, propOverrides)
+const setup = (propOverrides) => {
+  const props = Object.assign(
+    {
+      completedCount: 0,
+      activeCount: 0,
+      onClearCompleted: cy.stub().as('clear'),
+    },
+    propOverrides
+  )
 
   mount(
     <Provider store={store}>
@@ -38,7 +39,8 @@ describe('components', () => {
 
     it('should render filters', () => {
       setup()
-      cy.get('footer li').should('have.length', 3)
+      cy.get('footer li')
+        .should('have.length', 3)
         .should((li) => {
           expect(li[0]).to.have.text('All')
           expect(li[1]).to.have.text('Active')
@@ -53,7 +55,10 @@ describe('components', () => {
 
     it('should render clear button when completed todos', () => {
       setup({ completedCount: 1 })
-      cy.contains('button', 'Clear completed').should('have.class', 'clear-completed')
+      cy.contains('button', 'Clear completed').should(
+        'have.class',
+        'clear-completed'
+      )
     })
 
     it('should call onClearCompleted on clear button click', () => {

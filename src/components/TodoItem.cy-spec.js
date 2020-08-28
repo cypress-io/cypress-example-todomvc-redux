@@ -2,18 +2,18 @@
 import React from 'react'
 import TodoItem from './TodoItem'
 import { StoreProvider } from '../store'
-import {mount} from 'cypress-react-unit-test'
+import { mount } from 'cypress-react-unit-test'
 
-const setup = ( editing = false ) => {
+const setup = (editing = false) => {
   const props = {
     todo: {
       id: 0,
       text: 'Use Redux',
-      completed: false
+      completed: false,
     },
     editTodo: cy.stub().as('edit'),
     deleteTodo: cy.stub().as('delete'),
-    completeTodo: cy.stub().as('completeTodo')
+    completeTodo: cy.stub().as('completeTodo'),
   }
 
   // because our CSS styles are global, they assume
@@ -38,8 +38,10 @@ describe('components', () => {
     it('initial render', () => {
       setup()
 
-      cy.get('li').should('have.class', 'todo')
-        .find('div').should('have.class', 'view')
+      cy.get('li')
+        .should('have.class', 'todo')
+        .find('div')
+        .should('have.class', 'view')
 
       cy.get('input[type=checkbox]')
         .should('have.class', 'toggle')
@@ -52,14 +54,14 @@ describe('components', () => {
     it('input onChange should call completeTodo', () => {
       setup()
       cy.get('input').check()
-      cy.get('@completeTodo').should('have.been.calledWith', 0)
+      cy.get('@completeTodo').should('have.been.calledWith', { id: 0 })
     })
 
     it('button onClick should call deleteTodo', () => {
       setup()
       // button only becomes visible on hover
-      cy.get('.destroy').click({force: true})
-      cy.get('@delete').should('have.been.calledWith', 0)
+      cy.get('.destroy').click({ force: true })
+      cy.get('@delete').should('have.been.calledWith', { id: 0 })
     })
 
     it('label onDoubleClick should put component in edit state', () => {
@@ -71,21 +73,22 @@ describe('components', () => {
     it('edit state render', () => {
       setup(true)
       cy.get('li').should('have.class', 'editing')
-      cy.get('input')
-        .should('be.visible')
-        .and('have.value', 'Use Redux')
+      cy.get('input').should('be.visible').and('have.value', 'Use Redux')
     })
 
     it('TodoTextInput onSave should call editTodo', () => {
       setup(true)
       cy.focused().type('{enter}')
-      cy.get('@edit').should('have.been.calledWith', 0, 'Use Redux')
+      cy.get('@edit').should('have.been.calledWith', {
+        id: 0,
+        text: 'Use Redux',
+      })
     })
 
     it('TodoTextInput onSave should call deleteTodo if text is empty', () => {
       setup(true)
       cy.focused().clear().type('{enter}')
-      cy.get('@delete').should('have.been.calledWith', 0)
+      cy.get('@delete').should('have.been.calledWith', { id: 0 })
     })
 
     it('TodoTextInput onSave should exit component from edit state', () => {
