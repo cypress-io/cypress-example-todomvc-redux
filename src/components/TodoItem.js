@@ -8,11 +8,11 @@ export default class TodoItem extends Component {
     todo: PropTypes.object.isRequired,
     editTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
-    completeTodo: PropTypes.func.isRequired
+    completeTodo: PropTypes.func.isRequired,
   }
 
   state = {
-    editing: false
+    editing: false,
   }
 
   handleDoubleClick = () => {
@@ -21,14 +21,14 @@ export default class TodoItem extends Component {
 
   handleSave = (id, text) => {
     if (text.length === 0) {
-      this.props.deleteTodo(id)
+      this.props.deleteTodo({ id })
     } else {
-      this.props.editTodo(id, text)
+      this.props.editTodo({ id, text })
     }
     this.setState({ editing: false })
   }
 
-  render () {
+  render() {
     const { todo, completeTodo, deleteTodo } = this.props
 
     let element
@@ -37,20 +37,23 @@ export default class TodoItem extends Component {
         <TodoTextInput
           text={todo.text}
           editing={this.state.editing}
-          onSave={text => this.handleSave(todo.id, text)}
+          onSave={(text) => this.handleSave(todo.id, text)}
         />
       )
     } else {
       element = (
-        <div className='view'>
+        <div className="view">
           <input
-            className='toggle'
-            type='checkbox'
+            className="toggle"
+            type="checkbox"
             checked={todo.completed}
-            onChange={() => completeTodo(todo.id)}
+            onChange={() => completeTodo({ id: todo.id })}
           />
           <label onDoubleClick={this.handleDoubleClick}>{todo.text}</label>
-          <button className='destroy' onClick={() => deleteTodo(todo.id)} />
+          <button
+            className="destroy"
+            onClick={() => deleteTodo({ id: todo.id })}
+          />
         </div>
       )
     }
@@ -60,7 +63,7 @@ export default class TodoItem extends Component {
         className={classnames({
           todo: true,
           completed: todo.completed,
-          editing: this.state.editing
+          editing: this.state.editing,
         })}
       >
         {element}

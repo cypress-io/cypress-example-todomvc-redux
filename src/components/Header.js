@@ -3,24 +3,24 @@ import React from 'react'
 import TodoTextInput from './TodoTextInput'
 
 const Header = ({ addTodo }) => (
-  <header className='header'>
+  <header className="header">
     <h1>todos</h1>
     <TodoTextInput
       newTodo
-      onSave={text => {
+      onSave={(text) => {
         if (text.length !== 0) {
           // simulate delayed application logic
           // setTimeout(addTodo, 1000, text)
-          addTodo(text)
+          addTodo({ text })
         }
       }}
-      placeholder='What needs to be done?'
+      placeholder="What needs to be done?"
     />
   </header>
 )
 
 Header.propTypes = {
-  addTodo: PropTypes.func.isRequired
+  addTodo: PropTypes.func.isRequired,
 }
 
 export default Header

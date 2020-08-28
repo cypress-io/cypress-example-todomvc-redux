@@ -4,17 +4,17 @@ import Footer from './Footer'
 import VisibleTodoList from '../containers/VisibleTodoList'
 
 const MainSection = ({ todosCount, completedCount, actions }) => (
-  <section className='main'>
+  <section className="main">
     {!!todosCount && (
       <span>
         <input
-          className='toggle-all'
-          type='checkbox'
+          className="toggle-all"
+          type="checkbox"
           checked={completedCount === todosCount}
-          onClick={actions.completeAllTodos}
-          onChange={actions.completeAllTodos}
+          onClick={() => actions.completeAllTodos()}
+          onChange={() => actions.completeAllTodos()}
         />
-        <label data-cy-toggle-all onClick={actions.completeAllTodos} />
+        <label data-cy-toggle-all onClick={() => actions.completeAllTodos()} />
       </span>
     )}
     <VisibleTodoList />
@@ -22,7 +22,7 @@ const MainSection = ({ todosCount, completedCount, actions }) => (
       <Footer
         completedCount={completedCount}
         activeCount={todosCount - completedCount}
-        onClearCompleted={actions.clearCompleted}
+        onClearCompleted={() => actions.clearCompleted()}
       />
     )}
   </section>
@@ -31,7 +31,7 @@ const MainSection = ({ todosCount, completedCount, actions }) => (
 MainSection.propTypes = {
   todosCount: PropTypes.number.isRequired,
   completedCount: PropTypes.number.isRequired,
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
 }
 
 export default MainSection
