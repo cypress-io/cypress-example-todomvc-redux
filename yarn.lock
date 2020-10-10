@@ -3034,10 +3034,10 @@ cssstyle@^1.1.1:
   dependencies:
     cssom "0.3.x"
 
-cypress-react-unit-test@4.15.0:
-  version "4.15.0"
-  resolved "https://registry.yarnpkg.com/cypress-react-unit-test/-/cypress-react-unit-test-4.15.0.tgz#f4163658617def2dbb0d0ba146431f9f3bcc7842"
-  integrity sha512-Eo8icC9jij0n0IfVqq4ac6btPHHTPI1w1YT7l9p247rnwWrTQtRXOwC6zKTvQFENIShOL083UIGPUWwBRwycFA==
+cypress-react-unit-test@4.16.0:
+  version "4.16.0"
+  resolved "https://registry.yarnpkg.com/cypress-react-unit-test/-/cypress-react-unit-test-4.16.0.tgz#4ef86099308ec2c35f06bbfb95af3effa87101ea"
+  integrity sha512-XO3PHeN6G+R7A0gM4OM7rfnAdP29nvwgsj7C774YMydL8dMA7L6yEtpNKmlJQApFWb42DYHEExwiRvmoDWFgCA==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "7.10.4"
     "@cypress/code-coverage" "3.8.1"
