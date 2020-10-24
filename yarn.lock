@@ -3001,10 +3001,10 @@ cssstyle@^1.1.1:
   dependencies:
     cssom "0.3.x"
 
-cypress-react-unit-test@4.16.4:
-  version "4.16.4"
-  resolved "https://registry.yarnpkg.com/cypress-react-unit-test/-/cypress-react-unit-test-4.16.4.tgz#d46dcd55e03dfe951d34d0ec1524d6a639961613"
-  integrity sha512-TKYKlEJrj9bAfx1u7lz80wDhOYm4Ipya39aBrqVZ8KWNOY44YRdidbGj1EaD/RbWEEWJ787kiLl2c9B7EsElpg==
+cypress-react-unit-test@4.16.5:
+  version "4.16.5"
+  resolved "https://registry.yarnpkg.com/cypress-react-unit-test/-/cypress-react-unit-test-4.16.5.tgz#f3d826f8ffb2fb746d60e684e39c91e30967444e"
+  integrity sha512-xg2D761rpUtOWBt76pplIgjZHqJYu3bJPCgRFjSuWTKzoA9tJf+HhoAI9YU/rS0slJ6hEwSIPBZq7Tpq5pOaig==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "7.12.1"
     "@cypress/code-coverage" "3.8.2"
@@ -3014,7 +3014,7 @@ cypress-react-unit-test@4.16.4:
     cli-highlight "2.1.4"
     debug "4.1.1"
     find-up "5.0.0"
-    find-webpack "2.1.0"
+    find-webpack "2.2.0"
     inquirer "7.3.3"
     mime-types "2.1.26"
     semver "7.3.2"
@@ -3814,10 +3814,10 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-find-webpack@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/find-webpack/-/find-webpack-2.1.0.tgz#404c4775bd7c1b86904f658e052a9c178927857d"
-  integrity sha512-yQ7j/OnLGSzZ+kK8CCjvlKzQ/Utci34E1T7rKgH2ZCLQk4MrGKnHd90E5ki/3wDQ7InNIFYpIJ2LgpDUxCoi/g==
+find-webpack@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/find-webpack/-/find-webpack-2.2.0.tgz#c67638517bf5966ebbeef25857020afd341197c0"
+  integrity sha512-eWdunKuIRRuyL141m0Jaz+RoSOT0jSLfxH3FXnjPTLaMUwjXhbAg82UaCjUZTiYTJ+knSLFGNlxAuVAI6JweDA==
   dependencies:
     debug "4.1.1"
     find-yarn-workspace-root "1.2.1"
