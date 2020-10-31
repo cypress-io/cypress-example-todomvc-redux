@@ -1323,10 +1323,10 @@
     tunnel-agent "^0.6.0"
     uuid "^3.3.2"
 
-"@cypress/webpack-preprocessor@5.4.8":
-  version "5.4.8"
-  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.4.8.tgz#dfe41944aad2611ee28fa5f3f23906f1d4553d23"
-  integrity sha512-2uQRLphFOAjVicyyhZjpEeQJkW4yA/IfeNVO0HhBFNjIT/CVkfNOyF9VU2rJI8Xl/Ktq8gCdoTHTjEOStsjBSg==
+"@cypress/webpack-preprocessor@5.4.10":
+  version "5.4.10"
+  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.4.10.tgz#ed0a3ed495f5455899f7c567830b37477c3f26f5"
+  integrity sha512-6j809mAQcZsAbpIaQFlKwFQPKv1Y+ZyLr9bpW7d2utMGVll0W8Up4RPhIuAf4q9Tx+DOBQoiCpy/n0cRPxporw==
   dependencies:
     bluebird "^3.7.1"
     debug "^4.1.1"
@@ -3001,14 +3001,14 @@ cssstyle@^1.1.1:
   dependencies:
     cssom "0.3.x"
 
-cypress-react-unit-test@4.16.5:
-  version "4.16.5"
-  resolved "https://registry.yarnpkg.com/cypress-react-unit-test/-/cypress-react-unit-test-4.16.5.tgz#f3d826f8ffb2fb746d60e684e39c91e30967444e"
-  integrity sha512-xg2D761rpUtOWBt76pplIgjZHqJYu3bJPCgRFjSuWTKzoA9tJf+HhoAI9YU/rS0slJ6hEwSIPBZq7Tpq5pOaig==
+cypress-react-unit-test@4.16.8:
+  version "4.16.8"
+  resolved "https://registry.yarnpkg.com/cypress-react-unit-test/-/cypress-react-unit-test-4.16.8.tgz#b4c64b34fa0797ba325effde963bcbe6a4207f91"
+  integrity sha512-K5wnCe0w0XToanhyokjZRtSDqnWEldqY13m84g0VhR+VNkmXUvw9WX17plFYDy8KlS8o0anGqzs4lSZq0bpuIw==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "7.12.1"
     "@cypress/code-coverage" "3.8.2"
-    "@cypress/webpack-preprocessor" "5.4.8"
+    "@cypress/webpack-preprocessor" "5.4.10"
     babel-plugin-istanbul "6.0.0"
     chalk "4.1.0"
     cli-highlight "2.1.4"
