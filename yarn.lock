@@ -1274,19 +1274,6 @@
     through2 "^2.0.0"
     watchify "3.11.1"
 
-"@cypress/code-coverage@3.8.2":
-  version "3.8.2"
-  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.8.2.tgz#dd08d5ca088f46ed0c0d3f3e8ec8bc02ce052d32"
-  integrity sha512-wgzUxWAbsMJVyxnfyqF0VcyDXz38mnWpTpEnr+DFugKnDF7CQ9uwmvnGX1KN4d8kIGT9WpwaycJaLMwIStB+yw==
-  dependencies:
-    "@cypress/browserify-preprocessor" "3.0.1"
-    debug "4.2.0"
-    execa "4.0.3"
-    globby "11.0.1"
-    istanbul-lib-coverage "3.0.0"
-    js-yaml "3.14.0"
-    nyc "15.1.0"
-
 "@cypress/code-coverage@3.8.3":
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.8.3.tgz#4bda76bbf07a01036ad58a60b6f9f86d6cb8c156"
@@ -3014,13 +3001,13 @@ cssstyle@^1.1.1:
   dependencies:
     cssom "0.3.x"
 
-cypress-react-unit-test@4.16.8:
-  version "4.16.8"
-  resolved "https://registry.yarnpkg.com/cypress-react-unit-test/-/cypress-react-unit-test-4.16.8.tgz#b4c64b34fa0797ba325effde963bcbe6a4207f91"
-  integrity sha512-K5wnCe0w0XToanhyokjZRtSDqnWEldqY13m84g0VhR+VNkmXUvw9WX17plFYDy8KlS8o0anGqzs4lSZq0bpuIw==
+cypress-react-unit-test@4.16.9:
+  version "4.16.9"
+  resolved "https://registry.yarnpkg.com/cypress-react-unit-test/-/cypress-react-unit-test-4.16.9.tgz#eaf4dde3830914672cc716bf84f29bc2d24b6e4f"
+  integrity sha512-oK/N1jTBRgSnPzTAfU4RY1SnXDgwREuCeUq4blld+aY2/H0l4W82bmd/12XcIzJDraz3YbntPEDGAuCvy8KxJg==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "7.12.1"
-    "@cypress/code-coverage" "3.8.2"
+    "@cypress/code-coverage" "3.8.3"
     "@cypress/webpack-preprocessor" "5.4.10"
     babel-plugin-istanbul "6.0.0"
     chalk "4.1.0"
@@ -3563,10 +3550,10 @@ execa@3.4.0:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
-execa@4.0.3, execa@^4.0.2:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/execa/-/execa-4.0.3.tgz#0a34dabbad6d66100bd6f2c576c8669403f317f2"
-  integrity sha512-WFDXGHckXPWZX19t1kCsXzOpqX9LWYNqn4C+HqZlk/V0imTkzJZqf87ZBhvpHaftERYknpk0fjSylnXVlVgI0A==
+execa@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-4.1.0.tgz#4e5491ad1572f2f17a77d388c6c857135b22847a"
+  integrity sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==
   dependencies:
     cross-spawn "^7.0.0"
     get-stream "^5.0.0"
@@ -3578,10 +3565,10 @@ execa@4.0.3, execa@^4.0.2:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
-execa@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/execa/-/execa-4.1.0.tgz#4e5491ad1572f2f17a77d388c6c857135b22847a"
-  integrity sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==
+execa@^4.0.2:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-4.0.3.tgz#0a34dabbad6d66100bd6f2c576c8669403f317f2"
+  integrity sha512-WFDXGHckXPWZX19t1kCsXzOpqX9LWYNqn4C+HqZlk/V0imTkzJZqf87ZBhvpHaftERYknpk0fjSylnXVlVgI0A==
   dependencies:
     cross-spawn "^7.0.0"
     get-stream "^5.0.0"
