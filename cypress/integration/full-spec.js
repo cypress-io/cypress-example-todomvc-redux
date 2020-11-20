@@ -391,10 +391,10 @@ context('Editing', function () {
 
     cy.get('@secondTodo')
       .find('.toggle')
-      .should('not.be.visible')
+      .should('not.exist')
     cy.get('@secondTodo')
       .find('label')
-      .should('not.be.visible')
+      .should('not.exist')
   })
 
   it('should save edits on blur', function () {
