@@ -1334,6 +1334,19 @@
     js-yaml "3.14.0"
     nyc "15.1.0"
 
+"@cypress/code-coverage@3.8.4":
+  version "3.8.4"
+  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.8.4.tgz#e523782a5f51166a9f882c9b3ac8b36e4a0415bb"
+  integrity sha512-MI7pEgxUbynJFDbnGpE98G3+eZI5gcJya43x8DtK13Xoz0pFt7HNgFtlDcYtOuUrpRHCsne+kr0Yg96IJHZmgg==
+  dependencies:
+    "@cypress/browserify-preprocessor" "3.0.1"
+    debug "4.3.1"
+    execa "4.1.0"
+    globby "11.0.1"
+    istanbul-lib-coverage "3.0.0"
+    js-yaml "3.14.0"
+    nyc "15.1.0"
+
 "@cypress/listr-verbose-renderer@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@cypress/listr-verbose-renderer/-/listr-verbose-renderer-0.4.1.tgz#a77492f4b11dcc7c446a34b3e28721afd33c642a"
