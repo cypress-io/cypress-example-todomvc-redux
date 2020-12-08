@@ -7,7 +7,7 @@ workflows:
     jobs:
       - cypress/install:
           name: Install
-          yarn: true
+          install-command: yarn install --frozen-lockfile --offline
           executor: cypress/base-12-14-0
 
       - cypress/run:
