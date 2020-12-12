@@ -42,7 +42,7 @@
     "babel-plugin-istanbul": "6.0.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "3.1.0",
-    "cross-env": "7.0.2",
+    "cross-env": "7.0.3",
     "cypress": "6.1.0",
     "cypress-react-unit-test": "4.17.1",
     "istanbul-lib-coverage": "3.0.0",
