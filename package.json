@@ -36,25 +36,25 @@
   },
   "homepage": "https://github.com/cypress-io/cypress-example-todomvc-redux#readme",
   "devDependencies": {
-    "@babel/core": "7.11.4",
-    "@babel/preset-react": "7.10.4",
-    "@cypress/code-coverage": "3.8.1",
+    "@babel/core": "7.13.14",
+    "@babel/preset-react": "7.13.13",
+    "@cypress/code-coverage": "3.9.4",
     "babel-plugin-istanbul": "6.0.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "3.1.0",
-    "cross-env": "7.0.2",
-    "cypress": "5.0.0",
-    "cypress-react-unit-test": "4.11.2",
+    "cross-env": "7.0.3",
+    "cypress": "6.8.0",
+    "cypress-react-unit-test": "4.17.2",
     "istanbul-lib-coverage": "3.0.0",
-    "parcel-bundler": "1.12.4",
-    "start-server-and-test": "1.11.3"
+    "parcel-bundler": "1.12.5",
+    "start-server-and-test": "1.12.1"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "classnames": "2.2.6",
     "prop-types": "15.7.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-redux": "6.0.1",
     "todomvc-app-css": "2.3.0"
   }
