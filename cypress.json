@@ -7,5 +7,13 @@
   ],
   "env": {
     "cypress-plugin-snapshots": {}
+  },
+  "component": {
+    "componentFolder": "src",
+    "fixturesFolder": false,
+    "supportFile": "cypress/support/index.js",
+    "testFiles": "src/component/*-spec.js",
+    "viewportWidth": 300,
+    "viewportHeight": 300
   }
 }
