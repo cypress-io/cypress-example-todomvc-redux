@@ -1,54 +1,52 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-export default class TodoTextInput extends Component {
-  static propTypes = {
-    onSave: PropTypes.func.isRequired,
-    text: PropTypes.string,
-    placeholder: PropTypes.string,
-    editing: PropTypes.bool,
-    newTodo: PropTypes.bool
-  }
+function TodoTextInput(props) {
+  const [text, setText] = useState(props.text || '')
 
-  state = {
-    text: this.props.text || ''
-  }
-
-  handleSubmit = e => {
-    const text = e.target.value.trim()
-    if (e.which === 13) {
-      this.props.onSave(text)
-      if (this.props.newTodo) {
-        this.setState({ text: '' })
+  const handleSubmit = (event) => {
+    const text = event.target.value.trim()
+    if (event.which === 13) {
+      props.onSave(text)
+      if (props.newTodo) {
+        setText('')
       }
     }
   }
 
-  handleChange = e => {
-    this.setState({ text: e.target.value })
+  const handleChange = (event) => {
+    setText(event.target.value)
   }
 
-  handleBlur = e => {
-    if (!this.props.newTodo) {
-      this.props.onSave(e.target.value)
+  const handleBlur = (event) => {
+    if (!props.newTodo) {
+      props.onSave(event.target.value)
     }
   }
 
-  render() {
-    return (
-      <input className={
-        classnames({
-          edit: this.props.editing,
-          'new-todo': this.props.newTodo
-        })}
-        type="text"
-        placeholder={this.props.placeholder}
-        autoFocus={true}
-        value={this.state.text}
-        onBlur={this.handleBlur}
-        onChange={this.handleChange}
-        onKeyDown={this.handleSubmit} />
-    )
-  }
+  return (
+    <input
+      className={classnames({
+        edit: props.editing,
+        'new-todo': props.newTodo,
+      })}
+      type="text"
+      placeholder={props.placeholder}
+      autoFocus
+      value={text}
+      onBlur={handleBlur}
+      onChange={handleChange}
+      onKeyDown={handleSubmit}
+    />
+  )
 }
+TodoTextInput.propTypes = {
+  onSave: PropTypes.func.isRequired,
+  text: PropTypes.string,
+  placeholder: PropTypes.string,
+  editing: PropTypes.bool,
+  newTodo: PropTypes.bool,
+}
+
+export default TodoTextInput

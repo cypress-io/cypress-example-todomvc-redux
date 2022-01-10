@@ -1,18 +1,17 @@
 /// <reference types="cypress" />
 import React from 'react'
 import Header from './Header'
-import {mount} from 'cypress-react-unit-test'
+import { mount } from 'cypress-react-unit-test'
+
 // we are making mini application - thus we need a store!
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducer from '../reducers'
-const store = createStore(reducer)
+import { store } from '../store'
 
 describe('components', () => {
   describe('Header', () => {
     beforeEach(() => {
       const props = {
-        addTodo: cy.stub().as('addTodo')
+        addTodo: cy.stub().as('addTodo'),
       }
       mount(
         <Provider store={store}>
@@ -22,9 +21,12 @@ describe('components', () => {
     })
 
     it('should render correctly', () => {
-      cy.get('header').should('have.class', 'header')
-        .contains('h1', 'todos')
-      cy.get('header input').should('have.attr', 'placeholder', 'What needs to be done?')
+      cy.get('header').should('have.class', 'header').contains('h1', 'todos')
+      cy.get('header input').should(
+        'have.attr',
+        'placeholder',
+        'What needs to be done?'
+      )
     })
 
     it('should call addTodo if length of text is greater than 0', () => {

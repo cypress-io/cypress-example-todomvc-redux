@@ -50,13 +50,12 @@
     "start-server-and-test": "1.12.1"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
     "classnames": "2.2.6",
     "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "6.0.1",
-    "redux": "4.0.5",
-    "reselect": "4.0.0",
     "todomvc-app-css": "2.3.0"
   }
 }

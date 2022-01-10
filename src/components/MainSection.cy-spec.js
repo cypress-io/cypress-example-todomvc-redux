@@ -5,22 +5,23 @@ import { mount } from 'cypress-react-unit-test'
 
 // we are making mini application - thus we need a store!
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducer from '../reducers'
-const store = createStore(reducer)
+import { store } from '../store'
 
-const setup = propOverrides => {
-  const props = Object.assign({
-    todosCount: 2,
-    completedCount: 1,
-    actions: {
-      editTodo: cy.stub().as('edit'),
-      deleteTodo: cy.stub().as('delete'),
-      completeTodo: cy.stub().as('complete'),
-      completeAllTodos: cy.stub().as('completeAll'),
-      clearCompleted: cy.stub().as('clearCompleted')
-    }
-  }, propOverrides)
+const setup = (propOverrides) => {
+  const props = Object.assign(
+    {
+      todosCount: 2,
+      completedCount: 1,
+      actions: {
+        editTodo: cy.stub().as('edit'),
+        deleteTodo: cy.stub().as('delete'),
+        completeTodo: cy.stub().as('complete'),
+        completeAllTodos: cy.stub().as('completeAll'),
+        clearCompleted: cy.stub().as('clearCompleted'),
+      },
+    },
+    propOverrides
+  )
 
   mount(
     <Provider store={store}>
@@ -47,10 +48,9 @@ describe('components', () => {
 
       it('should be checked if all todos completed', () => {
         setup({
-          completedCount: 2
+          completedCount: 2,
         })
-        cy.get('input[type=checkbox]')
-          .should('be.checked')
+        cy.get('input[type=checkbox]').should('be.checked')
       })
 
       it('should call completeAllTodos on change', () => {
@@ -84,7 +84,7 @@ describe('components', () => {
       it('should not render if there are no todos', () => {
         setup({
           todosCount: 0,
-          completedCount: 0
+          completedCount: 0,
         })
         cy.get('li').should('have.length', 0)
       })
