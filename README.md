@@ -81,10 +81,10 @@ Full code coverage is not the guarantee of exceptional quality. For example, the
 
 ## Smoke tests
 
-As an example, there is a reusable smoke test [cypress/integration/smoke.js](cypress/integration/smoke.js) that goes through the most important parts of the app, covering 84% of the source code. This test can be reused from other tests, for example from [cypress/integration/smoke-spec.js](cypress/integration/smoke-spec.js), that can be executed after deploy for example by using [cypress-smoke.json](cypress-smoke.json) config file
+As an example, there is a reusable smoke test [cypress/integration/smoke.js](cypress/integration/smoke.js) that goes through the most important parts of the app, covering 84% of the source code. This test can be reused from other tests, for example from [cypress/integration/smoke-spec.js](cypress/integration/smoke-spec.js), that can be executed after deploy for example by using [cypress.config.smoke.js](cypress.config.smoke.js) config file
 
 ```shell
-npx cypress run --config-file cypress-smoke.json
+npx cypress run --config-file cypress.config.smoke.js
 ```
 
 ## Component tests
@@ -92,7 +92,7 @@ npx cypress run --config-file cypress-smoke.json
 Unit (individual JS functions) and component tests (React components) can be run without any server. There is no need to set anything up, this project works right out of the box without any additional steps, except you need to add `import 'cypress-react-unit-test'` to your Cypress [`supportFile`](https://on.cypress.io/configuration#Folders-Files).
 
 ```shell
-$ npx cypress open --config-file cypress-unit.json
+$ npx cypress open --config-file cypress.config.unit.js
 ```
 
 These tests leave alongside Jest tests in [src](src) folder and are named `*.cy-spec.js`. Implemented using [cypress-react-unit-test](https://github.com/bahmutov/cypress-react-unit-test).

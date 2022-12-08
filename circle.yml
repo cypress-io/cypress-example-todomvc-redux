@@ -3,33 +3,6 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@2
 workflows:
-  # a separate workflow to confirm
-  # an older version of Cypress still works
-  test-previous-cypress:
-    jobs:
-      - cypress/run:
-          name: 'Cypress v6.0.0'
-          yarn: true
-          executor: cypress/base-12-14-0
-          post-checkout:
-            - run: yarn add -D cypress@6.0.0
-          # we need to start the web application
-          start: npm start
-          command: NODE_ENV=test npm run cypress:run
-          # there are no jobs to follow this one
-          # so no need to save the workspace files (saves time)
-          no-workspace: true
-          # verify the collected code coverage
-          post-steps:
-            # store the created coverage report folder
-            # you can click on it in the CircleCI UI
-            # to see live static HTML site
-            - store_artifacts:
-                path: coverage
-            # show code coverage numbers
-            - run: npm run report:coverage:summary
-            - run: npm run report:coverage:text
-
   # testing the currently installed Cypress version
   test-current-cypress:
     jobs:
@@ -69,7 +42,7 @@ workflows:
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
-          command: npx cypress run --config-file cypress-unit.json
+          command: npx cypress run --config-file cypress.config.unit.js
           no-workspace: true
 
       - cypress/run:
@@ -84,5 +57,5 @@ workflows:
               only:
                 - master
           start: npm start
-          command: NODE_ENV=test npx cypress run --config-file cypress-smoke.json
+          command: NODE_ENV=test npx cypress run --config-file cypress.config.smoke.js
           no-workspace: true

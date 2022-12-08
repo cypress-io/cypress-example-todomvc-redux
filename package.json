@@ -18,7 +18,7 @@
     "report:coverage:text": "nyc report --reporter=text",
     "report:coverage:summary": "nyc report --reporter=text-summary",
     "coveralls": "cat coverage/lcov.info | coveralls",
-    "component": "npx cypress open --config-file cypress-unit.json"
+    "component": "npx cypress open --config-file cypress.config.unit.js"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@babel/core": "7.13.14",
     "@babel/preset-react": "7.13.13",
-    "@cypress/code-coverage": "3.9.4",
+    "@cypress/code-coverage": "^3.10.0",
     "babel-plugin-istanbul": "6.0.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "3.1.0",

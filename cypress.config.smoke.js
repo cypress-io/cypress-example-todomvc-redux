@@ -1,4 +1,4 @@
-{
+module.exports = {
   "baseUrl": "http://localhost:1234",
   "testFiles": [
     "smoke-spec.js"
