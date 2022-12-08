@@ -39,6 +39,7 @@
     "@babel/core": "7.13.14",
     "@babel/preset-react": "7.13.13",
     "@cypress/code-coverage": "^3.10.0",
+    "babel-loader": "^9.1.0",
     "babel-plugin-istanbul": "6.0.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "3.1.0",
@@ -47,7 +48,8 @@
     "cypress-react-unit-test": "4.17.2",
     "istanbul-lib-coverage": "3.0.0",
     "parcel-bundler": "1.12.5",
-    "start-server-and-test": "1.12.1"
+    "start-server-and-test": "1.12.1",
+    "webpack": "^5.75.0"
   },
   "dependencies": {
     "classnames": "2.3.1",
