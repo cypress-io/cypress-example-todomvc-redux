@@ -10,7 +10,7 @@ workflows:
       - cypress/run:
           name: 'Cypress v6.0.0'
           yarn: true
-          executor: cypress/base-12-14-0
+          executor: cypress/base-12-22-8
           post-checkout:
             - run: yarn add -D cypress@6.0.0
           # we need to start the web application
@@ -36,11 +36,11 @@ workflows:
       - cypress/install:
           name: Install
           yarn: true
-          executor: cypress/base-16-16-0
+          executor: cypress/base-12-22-8
 
       - cypress/run:
           name: full tests
-          executor: cypress/base-16-16-0
+          executor: cypress/base-12-22-8
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
@@ -65,7 +65,7 @@ workflows:
 
       - cypress/run:
           name: component tests
-          executor: cypress/base-16-16-0
+          executor: cypress/base-12-22-8
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
