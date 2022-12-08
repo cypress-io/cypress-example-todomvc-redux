@@ -36,11 +36,11 @@ workflows:
       - cypress/install:
           name: Install
           yarn: true
-          executor: cypress/base-12-22-8
+          executor: cypress/base-16-14-2-slim
 
       - cypress/run:
           name: full tests
-          executor: cypress/base-12-22-8
+          executor: cypress/base-16-14-2-slim
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
@@ -65,7 +65,7 @@ workflows:
 
       - cypress/run:
           name: component tests
-          executor: cypress/base-12-22-8
+          executor: cypress/base-16-14-2-slim
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
