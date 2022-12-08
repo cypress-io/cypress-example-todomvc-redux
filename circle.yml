@@ -1,7 +1,7 @@
 # see https://github.com/cypress-io/circleci-orb
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@1
+  cypress: cypress-io/cypress@2
 workflows:
   # a separate workflow to confirm
   # an older version of Cypress still works
