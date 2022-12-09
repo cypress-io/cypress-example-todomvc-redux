@@ -17,8 +17,7 @@
     "report:coverage": "nyc report --reporter=html",
     "report:coverage:text": "nyc report --reporter=text",
     "report:coverage:summary": "nyc report --reporter=text-summary",
-    "coveralls": "cat coverage/lcov.info | coveralls",
-    "component": "npx cypress open --config-file cypress.config.unit.js"
+    "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
