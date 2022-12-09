@@ -52,6 +52,10 @@ Cypress.Commands.add('createDefaultTodos', function () {
     // 'spinning blue state' to the 'finished state'
     cmd.set({ $el: $listItems }).snapshot().end()
   })
+
+  // return a query for the todo items so that we can
+  // alias the result of this command in our tests
+  return cy.get('.todo-list li', { log: false })
 })
 
 Cypress.Commands.add('createTodo', function (todo) {
