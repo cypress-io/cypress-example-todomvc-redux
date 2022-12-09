@@ -35,18 +35,3 @@ workflows:
             # send code coverage to coveralls.io
             # https://coveralls.io/github/cypress-io/cypress-example-todomvc-redux
             - run: npm run coveralls
-
-      - cypress/run:
-          name: smoke tests
-          executor: cypress/base-14
-          requires:
-            - Install
-          install-command: echo 'Nothing to install in this job'
-          # we will only run smoke tests on master branch
-          filters:
-            branches:
-              only:
-                - master
-          start: npm start
-          command: NODE_ENV=test npx cypress run --config-file cypress.config.smoke.js
-          no-workspace: true
