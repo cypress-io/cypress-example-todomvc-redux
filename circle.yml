@@ -36,14 +36,14 @@ workflows:
             # https://coveralls.io/github/cypress-io/cypress-example-todomvc-redux
             - run: npm run coveralls
 
-      - cypress/run:
-          name: component tests
-          executor: cypress/base-14
-          requires:
-            - Install
-          install-command: echo 'Nothing to install in this job'
-          command: npx cypress run --config-file cypress.config.unit.js
-          no-workspace: true
+      # - cypress/run:
+      #     name: component tests
+      #     executor: cypress/base-14
+      #     requires:
+      #       - Install
+      #     install-command: echo 'Nothing to install in this job'
+      #     command: npx cypress run --config-file cypress.config.unit.js
+      #     no-workspace: true
 
       - cypress/run:
           name: smoke tests
