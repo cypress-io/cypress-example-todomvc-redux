@@ -9,11 +9,11 @@ workflows:
       - cypress/install:
           name: Install
           yarn: true
-          executor: cypress/base-14
+          executor: cypress/base:18.16.1
 
       - cypress/run:
           name: full tests
-          executor: cypress/base-14
+          executor: cypress/base:18.16.1
           requires:
             - Install
           install-command: echo 'Nothing to install in this job'
