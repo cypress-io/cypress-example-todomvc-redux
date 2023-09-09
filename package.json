@@ -57,7 +57,7 @@
     "react-dom": "17.0.2",
     "react-redux": "8.0.5",
     "redux": "4.2.1",
-    "reselect": "4.1.7",
+    "reselect": "4.1.8",
     "todomvc-app-css": "2.4.2"
   }
 }
