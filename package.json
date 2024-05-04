@@ -45,7 +45,7 @@
     "cross-env": "7.0.3",
     "cypress": "13.1.0",
     "cypress-react-unit-test": "4.17.2",
-    "istanbul-lib-coverage": "3.2.0",
+    "istanbul-lib-coverage": "3.2.2",
     "parcel-bundler": "1.12.5",
     "start-server-and-test": "1.15.4",
     "webpack": "^5.75.0"
